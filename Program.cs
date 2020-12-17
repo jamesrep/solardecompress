@@ -75,7 +75,14 @@ namespace solardecompress
         {
             try
             {
-                   Console.WriteLine(string.Format("{0,-55}   {1,-50}", ZHelperFoundInBackdoor.Unzip(strArg).Replace("\n", "\\n"), strArg));
+                if (bModeDecode)
+                {
+                    Console.WriteLine(string.Format("{0,-55}   {1,-50}", ZHelperFoundInBackdoor.Unzip(strArg).Replace("\n", "\\n"), strArg));
+                }
+                else
+                {
+                    Console.WriteLine(string.Format("{0,-55}   {1,-50}", ZHelperFoundInBackdoor.Zip(strArg), strArg));
+                }
 
             }
             catch
