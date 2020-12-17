@@ -71,8 +71,6 @@ namespace solardecompress
     // This is my simple class to make the decoding process.
     class Program
     {
-        static Random random = new Random();
-
         static void printDecoded(bool bModeDecode, string strArg)
         {
             try
